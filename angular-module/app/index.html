@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="indexCtrl">
+<head>
+    <!--引入bootstrap-->
+    <link rel="stylesheet" href="thirdPart/bootstrap/bootstrap.min.css">
+</head>
+
+<body>
+<div ng-style="container">
+
+    <!-- header -->
+    <ng-include src="'system/header/header.html'"></ng-include>
+    <!--<div ng-include="'system/header/header.html'"></div>-->
+
+    <!--main body -->
+    <div ng-view></div>
+
+    <!-- Footer -->
+    <ng-include src="'system/footer/footer.html'"></ng-include>
+    <!--<div ng-include="'system/footer/footer.html'"></div>-->
+
+</div>
+
+</body>
+
+<!--引入 angularJs-->
+<script src="thirdPart/angular/angular.min.js"></script>
+<script src="thirdPart/angular/angular-route.min.js"></script>
+<script src="app.js"></script>
+<script src="system/footer/FooterController.js"></script>
+
+</html>
