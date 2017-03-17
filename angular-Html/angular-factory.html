@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS学习</title>
+    <script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+    <div ng-controller="myCtrl">
+        <button ng-click="getPrivate()">按钮一</button>
+        <button ng-click="getPUbluc()">按钮二</button>
+    </div>
+    
+</body>
+<script type="text/javascript">
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, myFactory) {
+    $scope.getPrivate = function() {
+        alert(myFactory.getPrivate());
+    };
+    $scope.getPUbluc = function() {
+        alert(myFactory.variable);
+    };
+});
+//一定要return一个object 不然就报错
+app.factory('myFactory', function() {
+    console.log('instance myFactory');//只在第一次调用的时候 才会输出
+    var factory = {};
+    var privateValue = "I am Private";
+    factory.variable = "This is public";
+    factory.getPrivate = function() {
+		console.log('instance getPrivate()');//每次调用都会打印
+        return privateValue;
+    };
+    return factory;
+});
+</script>
+</html>
+<!-- http://blog.csdn.net/evankaka/article/details/51114953 
+
+1) 用 Factory 就是创建一个对象，为它添加属性，然后把这个对象返回出来。你把 service 传进 controller 之后，在 controller 里这个对象里的属性就可以通过 factory 使用了。
+2) Service 是用"new"关键字实例化的。因此，你应该给"this"添加属性，然后 service 返回"this"。你把 service 传进 controller 之后，在controller里 "this" 上的属性就可以通过 service 来使用了。
+3) Providers 是唯一一种你可以传进 .config() 函数的 service。当你想要在 service 对象启用之前，先进行模块范围的配置，那就应该用 provider。
+4）Factory/service是第一个注入时才实例化，而provider不是，它是在config之前就已实例 化好
+
+-->
