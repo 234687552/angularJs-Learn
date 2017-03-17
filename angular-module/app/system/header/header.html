@@ -1,21 +1,50 @@
-<header ng-controller="headCtrl">
+<nav class="navbar navbar-default top-navbar" role="navigation">
+    <div class="navbar-header">|
+        <!--在小屏幕才显示出来的按钮-->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
 
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header"
-                 ng-click="itemClick(null)">
-                <a class="navbar-brand" href="#">首页</a>
-            </div>
+        <a class="navbar-brand" href="#"> <strong>管理首页</strong></a>
+    </div>
 
-            <div>
-                <ul class="nav navbar-nav">
-                    <li ng-repeat="navItem in navItems" ng-model="navItems" required
-                        ng-class="{active: selectedId == navItem.id}"
-                        ng-click="itemClick(navItem.id)">
-                        <a href="{{navItem.href}}">{{navItem.title}}</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
+    <ul class="nav navbar-top-links navbar-right">
+        <!-- /.dropdown-信息 -->
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                <span class="glyphicon glyphicon glyphicon-bell"></span>
+                <span class="glyphicon glyphicon-triangle-bottom"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-alerts">
+
+                <li><a href="#">还不发工资</a></li>
+                <li class="divider"></li>
+                <li><a href="#">没钱吃饭了</a></li>
+                <li class="divider"></li>
+                <li><a href="#">情何以堪</a></li>
+
+            </ul>
+        </li>
+
+        <!-- /.dropdown-用户 -->
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                <span class="glyphicon glyphicon glyphicon-user"></span>
+                <span class="glyphicon glyphicon-triangle-bottom"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+
+                <li><a href="#">User Profile</a></li>
+                <li class="divider"></li>
+                <li><a href="#"> Settings</a></li>
+                <li class="divider"></li>
+                <li><a href="#"> Logout</a></li>
+
+            </ul>
+        </li>
+
+    </ul>
+</nav>
