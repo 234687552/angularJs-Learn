@@ -3,15 +3,15 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header"
-                 ng-click="selectedItem = null">
+                 ng-click="itemClick(null)">
                 <a class="navbar-brand" href="#">首页</a>
             </div>
 
             <div>
                 <ul class="nav navbar-nav">
                     <li ng-repeat="navItem in navItems" ng-model="navItems" required
-                        ng-class="{active: selectedItem == navItem}"
-                        ng-click="itemClick(navItem)">
+                        ng-class="{active: selectedId == navItem.id}"
+                        ng-click="itemClick(navItem.id)">
                         <a href="{{navItem.href}}">{{navItem.title}}</a>
                     </li>
                 </ul>
