@@ -21,6 +21,12 @@ app.controller('headCtrl', function ($scope, $location) {
             title: 'Management',
             locationUrl: '/manageHome',
             href: '#'
+        },
+        {
+            id: 4,
+            title: 'Other',
+            locationUrl: '/manageHome',
+            href: '#'
         }
     ];
 

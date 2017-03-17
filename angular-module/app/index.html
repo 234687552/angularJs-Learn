@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 <html ng-app="app" ng-controller="indexCtrl">
 <head>
+    <!--参考http://v3.bootcss.com/css/-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta id="extViewportMeta" name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
     <!--引入第三方样式-->
-    <link rel="stylesheet" href="thirdPart/bootstrap/3.3.7/bootstrap.min.css">
+    <link rel="stylesheet" href="thirdPart/bootstrap/3.3.7/css/bootstrap.min.css">
     <!--system 样式-->
     <link rel="stylesheet" type="text/css" href="system/footer/footer.css"/>
     <link rel="stylesheet" type="text/css" href="system/navigator/navigator.css"/>
+
 </head>
 
 <body>
-<div ng-style="container">
-
+<div class="panel-body">
     <!-- header -->
     <div ng-include="'system/header/header.html'"></div>
 
-    <!--left navigator-->
-    <div ng-include="'system/navigator/navigator.html'"></div>
+    <div class="row">
+        <!--left navigator-->
+        <div class="col-md-2" ng-include="'system/navigator/navigator.html'"></div>
 
-    <!--main body -->
-    <div ng-view></div>
+        <!--main body -->
+        <div class="col-md-10">
+            <!--content-->
+            <div ng-view> </divng-view></div>
 
-    <!-- Footer -->
-    <div ng-include="'system/footer/footer.html'"></div>
+            <!-- Footer -->
+            <div ng-include="'system/footer/footer.html'"></div>
+        </div>
+
+    </div>
 
 </div>
 
@@ -31,13 +43,11 @@
 <script src="thirdPart/angular/1.6.3/angular.min.js"></script>
 <script src="thirdPart/angular/1.6.3/angular-route.min.js"></script>
 <script src="thirdPart/jquery/jquery-3.2.0.min.js"></script> <!--bootstrap.js 依赖 放在 bootstrap前面-->
-<script src="thirdPart/bootstrap/3.3.7/bootstrap.min.js"></script>
+<script src="thirdPart/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <!--system javascript-->
 <script src="system/base/baseController.js"></script>
 <script src="app.js"></script>
-
-<script src="system/footer/FooterController.js"></script>
 
 <script src="system/header/HeaderController.js"></script>
 <script src="system/header/HeaderRouter.js"></script>
