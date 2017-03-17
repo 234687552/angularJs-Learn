@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html ng-app="app" ng-controller="indexCtrl">
 <head>
-    <!--引入bootstrap-->
+    <!--引入第三方样式-->
     <link rel="stylesheet" href="thirdPart/bootstrap/bootstrap.min.css">
+    <!--system 样式-->
+    <link rel="stylesheet" type="text/css" href="system/footer/footer.css"/>
 </head>
 
 <body>
 <div ng-style="container">
 
     <!-- header -->
-    <ng-include src="'system/header/header.html'"></ng-include>
-    <!--<div ng-include="'system/header/header.html'"></div>-->
+    <div ng-include="'system/header/header.html'"></div>
 
     <!--main body -->
     <div ng-view></div>
 
     <!-- Footer -->
-    <ng-include src="'system/footer/footer.html'"></ng-include>
-    <!--<div ng-include="'system/footer/footer.html'"></div>-->
+    <div ng-include="'system/footer/footer.html'"></div>
 
 </div>
 
 </body>
 
-<!--引入 angularJs-->
+<!--第三方 javascript-->
 <script src="thirdPart/angular/angular.min.js"></script>
 <script src="thirdPart/angular/angular-route.min.js"></script>
+
+<!--system javascript-->
+<script src="system/base/baseController.js"></script>
 <script src="app.js"></script>
 <script src="system/footer/FooterController.js"></script>
+<script src="system/header/HeaderController.js"></script>
+<script src="system/header/HeaderRouter.js"></script>
 
 </html>
