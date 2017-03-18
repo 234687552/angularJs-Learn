@@ -7,9 +7,7 @@
     <!--引入第三方样式-->
     <link rel="stylesheet" href="thirdPart/bootstrap/3.3.7/css/bootstrap.min.css">
     <!--system 样式-->
-    <link rel="stylesheet" type="text/css" href="system/footer/footer.css"/>
     <link rel="stylesheet" type="text/css" href="system/navigator/navigator.css"/>
-    <link rel="stylesheet" type="text/css" href="system/header/header.css"/>
 
 </head>
 
@@ -18,15 +16,14 @@
     <!-- header -->
     <div ng-include="'system/header/header.html'"></div>
 
-    <div class="row">
+    <div class="container row">
         <!--left navigator-->
         <div class="col-md-2" ng-include="'system/navigator/navigator.html'"></div>
 
         <!--main body -->
         <div class="col-md-10">
             <!--content-->
-            <div ng-view> </divng-view></div>
-
+            <div ng-view></div>
             <!-- Footer -->
             <div ng-include="'system/footer/footer.html'"></div>
         </div>
@@ -40,6 +37,7 @@
 <!--第三方 javascript-->
 <script src="thirdPart/angular/1.6.3/angular.min.js"></script>
 <script src="thirdPart/angular/1.6.3/angular-route.min.js"></script>
+<script src="thirdPart/angular/1.6.3/angular-animate.min.js"></script>
 <script src="thirdPart/jquery/jquery-3.2.0.min.js"></script> <!--bootstrap.js 依赖 放在 bootstrap前面-->
 <script src="thirdPart/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -51,6 +49,6 @@
 <script src="system/header/HeaderRouter.js"></script>
 
 <script src="system/navigator/NavController.js"></script>
-<script src="system/navigator/NavRouter.js"></script>
+<script src="system/navigator/NavDirective.js"></script>
 
 </html>

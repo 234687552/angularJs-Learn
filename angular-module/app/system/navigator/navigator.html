@@ -1,108 +1,69 @@
-<div class="panel-group table-responsive" role="tablist">
-    <div class="panel panel-primary leftMenu">
-        <!-- 利用data-target指定要折叠的分组列表 -->
-        <div class="panel-heading" id="collapseListGroupHeading1" data-toggle="collapse"
-             data-target="#collapseListGroup1" role="tab">
-            <h4 class="panel-title">
-                分组1
-                <span class="glyphicon glyphicon-chevron-up right"></span>
-            </h4>
+<nav ng-controller="navCtrl" style="margin-top: -10px">
+    <!-- 主面板 -->
+    <div class="row panel-group" id="navPanel">
+        <!--分组1 start-->
+        <div class="panel panel-info">
+            <!--添加属性：data-parent="#navPanel" 有点击一个栏目自动关闭其他栏目效果 不然只能点自己开关自己的栏目-->
+            <!-- 利用data-target指定要折叠的分组列表(也可用href) -->
+            <div class="panel-heading" data-toggle="collapse" data-parent="#navPanel"
+                 data-target="#groupList1">
+                <h4 class="panel-title">
+                    分组1
+                </h4>
+            </div>
+            <!-- 子栏目需要 .panel-collapse和.collapse标明折叠元素 collapse in表示要显示出来 -->
+            <div id="groupList1" class="panel-collapse collapse">
+                <ul class="nav ">
+                    <li><a href="#">分组1-1</a></li>
+                    <li><a href="#">分组1-2</a></li>
+                    <li><a href="#">分组1-3</a></li>
+                    <li><a href="#">分组1-1</a></li>
+                    <li><a href="#">分组1-2</a></li>
+                    <li><a href="#">分组1-3</a></li>
+                    <li><a href="#">分组1-1</a></li>
+                    <li><a href="#">分组1-2</a></li>
+                    <li><a href="#">分组1-3</a></li>
+                    <li><a href="#">分组1-1</a></li>
+                    <li><a href="#">分组1-2</a></li>
+                    <li><a href="#">分组1-3</a></li>
+                </ul>
+            </div>
         </div>
-        <!-- .panel-collapse和.collapse标明折叠元素 .in表示要显示出来 -->
-        <div id="collapseListGroup1" class="panel-collapse collapse in" role="tabpanel"
-             aria-labelledby="collapseListGroupHeading1">
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <!-- 利用data-target指定URL -->
-                    <button class="menu-item-left" data-target="test2.html">
-                        <span class="glyphicon glyphicon-triangle-right"></span>分组项1-1
-                    </button>
-                </li>
-                <li class="list-group-item">
-                    <button class="menu-item-left">
-                        <span class="glyphicon glyphicon-triangle-right"></span>分组项1-2
-                    </button>
-                </li>
-                <li class="list-group-item">
-                    <button class="menu-item-left">
-                        <span class="glyphicon glyphicon-triangle-right"></span>分组项1-3
-                    </button>
-                </li>
-                <li class="list-group-item">
-                    <button class="menu-item-left">
-                        <span class="glyphicon glyphicon-triangle-right"></span>分组项1-4
-                    </button>
-                </li>
-                <li class="list-group-item">
-                    <button class="menu-item-left">
-                        <span class="glyphicon glyphicon-triangle-right"></span>分组项1-5
-                    </button>
-                </li>
-                <li class="list-group-item">
-                    <button class="menu-item-left">
-                        <span class="glyphicon glyphicon-triangle-right"></span>分组项1-6
-                    </button>
-                </li>
-                <li class="list-group-item">
-                    <button class="menu-item-left">
-                        <span class="glyphicon glyphicon-triangle-right"></span>分组项1-7
-                    </button>
-                </li>
-                <li class="list-group-item">
-                    <button class="menu-item-left">
-                        <span class="glyphicon glyphicon-triangle-right"></span>分组项1-8
-                    </button>
-                </li>
-                <li class="list-group-item">
-                    <button class="menu-item-left">
-                        <span class="glyphicon glyphicon-triangle-right"></span>分组项1-9
-                    </button>
-                </li>
-                <li class="list-group-item">
-                    <button class="menu-item-left">
-                        <span class="glyphicon glyphicon-triangle-right"></span>分组项1-10
-                    </button>
-                </li>
-                <li class="list-group-item">
-                    <button class="menu-item-left">
-                        <span class="glyphicon glyphicon-triangle-right"></span>分组项1-11
-                    </button>
-                </li>
-            </ul>
+        <!--分组1 end-->
+        <!--分组2 start-->
+        <div class="panel panel-info">
+            <div class="panel-heading" data-toggle="collapse" data-parent="#navPanel"
+                 data-target="#groupList2">
+                <h4 class="panel-title">
+                    分组2
+                </h4>
+            </div>
+            <div id="groupList2" class="panel-collapse collapse in">
+                <ul class="nav ">
+                    <li><a href="#">分组1-1</a></li>
+                    <li><a href="#">分组1-2</a></li>
+                    <li><a href="#">分组1-3</a></li>
+                </ul>
+            </div>
         </div>
-    </div><!--panel end-->
-    <div class="panel panel-primary leftMenu">
-        <div class="panel-heading" id="collapseListGroupHeading2" data-toggle="collapse"
-             data-target="#collapseListGroup2" role="tab">
-            <h4 class="panel-title">
-                分组2
-                <span class="glyphicon glyphicon-chevron-down right"></span>
-            </h4>
+        <!--分组2 end-->
+
+        <!--分组3 start-->
+        <div class="panel panel-info">
+            <div class="panel-heading" data-toggle="collapse" data-parent="#navPanel"
+                 data-target="#groupList3">
+                <h4 class="panel-title">
+                    分组3
+                </h4>
+            </div>
+            <div id="groupList3" class="panel-collapse collapse in">
+                <ul class="nav ">
+                    <li><a href="#">分组1-1</a></li>
+                    <li><a href="#">分组1-2</a></li>
+                    <li><a href="#">分组1-3</a></li>
+                </ul>
+            </div>
         </div>
-        <div id="collapseListGroup2" class="panel-collapse collapse" role="tabpanel"
-             aria-labelledby="collapseListGroupHeading2">
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <button class="menu-item-left">
-                        <span class="glyphicon glyphicon-triangle-right"></span>分组项2-1
-                    </button>
-                </li>
-                <li class="list-group-item">
-                    <button class="menu-item-left">
-                        <span class="glyphicon glyphicon-triangle-right"></span>分组项2-2
-                    </button>
-                </li>
-                <li class="list-group-item">
-                    <button class="menu-item-left">
-                        <span class="glyphicon glyphicon-triangle-right"></span>分组项2-3
-                    </button>
-                </li>
-                <li class="list-group-item">
-                    <button class="menu-item-left">
-                        <span class="glyphicon glyphicon-triangle-right"></span>分组项2-4
-                    </button>
-                </li>
-            </ul>
-        </div>
+        <!--分组3 end-->
     </div>
-</div>
+</nav>
