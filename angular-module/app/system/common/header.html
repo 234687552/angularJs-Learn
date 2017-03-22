@@ -1,0 +1,73 @@
+<header ng-controller="headerCtrl">
+    <nav class="navbar navbar-default" role="navigation">
+        <!--左边头部-->
+        <div class="navbar-header">
+            <!--屏幕变小的时候出现-->
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#navPanel"><span class="sr-only">Toggle navigation</span><span
+                    class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            <a class="navbar-brand " href="#">公司名称</a>
+        </div>
+
+        <div class="collapse navbar-collapse">
+
+            <!--左边栏目-->
+            <ul class="nav navbar-nav">
+
+                <li ng-repeat="item in headers">
+                    <a href="{{item.href}}">{{item.text}}</a>
+                </li>
+
+            </ul>
+            <!--右边栏目-->
+            <ul class="nav navbar-nav navbar-right">
+                <!--信息管理-->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-envelope"></span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu ">
+                        <li><a href="#">Dapibus ac facilisis in</a></li>
+                        <li class="divider"></li> <!--横线-->
+                        <li><a href="#">Cras sit amet nibh liberoasfafasdfafafa</a></li>
+                        <li class="divider"></li> <!--横线-->
+                        <li><a href="#">Porta ac consectetur ac</a></li>
+                        <li class="divider"></li> <!--横线-->
+                        <li><a href="#">Vestibulum at eros</a></li>
+                    </ul>
+                </li>
+                <!--用户管理-->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-user"></span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#/userProfile">
+                                <span class="glyphicon glyphicon-list"></span>
+                                Profile
+                            </a>
+                        </li>
+                        <li class="divider"></li> <!--横线-->
+                        <li>
+                            <a href="#/userSetting">
+                                <span class="glyphicon glyphicon-cog"></span>
+                                Setting
+                            </a>
+                        </li>
+                        <li class="divider"></li> <!--横线-->
+                        <li>
+                            <a href="#/logout">
+                                <span class="glyphicon glyphicon-log-out"></span>
+                                Logout
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>

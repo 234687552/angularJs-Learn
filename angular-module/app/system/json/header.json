@@ -1,0 +1,14 @@
+{
+  "headers": [
+    {
+      "id": "1",
+      "href": "#/resourceManage",
+      "text": "资源管理"
+    },
+    {
+      "id": "2",
+      "href": "#/agentManage",
+      "text": "坐席管理"
+    }
+  ]
+}
